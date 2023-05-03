@@ -12,7 +12,7 @@
 | Nombre         | Legajo |
 |-|-|
 | Borgatta Lucas | 81664  |
-| Manero, Nahuel Agustin | 81661  |
+| Manero, Nahuel Agustín | 81661  |
 
 ---
 

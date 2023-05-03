@@ -21,6 +21,7 @@
   * Presentaciones_Clases_2023
 * Practico
   * Trabajos_Practicos
+    * TP\<XX>_<Descripción>
 
 ---
 ## Listado de Ítems de Configuración
@@ -36,7 +37,12 @@
 ## Glosario
 | Expresion | Descripcion |
 |-|-|
-| | | 
+| \<XX> | Numero de dos digitos. |
+| | Ejemplo: TP01_REQUERIMIENTOS ÁGILES_User Stories_Grupo1.pdf |
+| \<ext> | Extension del archivo.
+| | Ejemplo: .pdf .doc |
+| \<DirectorioDelDocumento> | Directorio donde esta almacenado cada trabajo practico con sus debidos documentos. |
+| \<Descripcion> | Descripcion del tema trabajado en el trabajo practico o del tema tratado en la presentacion de las clases teoricas |
 
 
 

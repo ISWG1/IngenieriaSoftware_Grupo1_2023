@@ -21,21 +21,25 @@
 * Teorico
   * Presentaciones_Clases_2023
   * Bibliografia
+  * Trabajos_Conceptuales
+    * TC\<XX>_\<Descripcion>
 * Practico
   * Guia_Trabajos_Practicos
   * Trabajos_Practicos
-    * TP\<XX>_<Descripción>
+    * TP\<XX>_\<Descripción>
 
 ---
 ## Listado de Ítems de Configuración
 | Nombre del Ítem de Configuración | Regla de Nombrado | Ubicación Física (Ruta Relativa) |
 |-|-|-|
-| Trabajos Practicos | TP\<XX>_<Descripción>_Grupo1.\<ext> | /Practico/Trabajos_Practicos/\<DirectorioDelDocumento>/
+| Trabajos Practicos | TP\<XX>_\<Descripción>_Grupo1.\<ext> | /Practico/Trabajos_Practicos/\<DirectorioDelDocumento>/ |
+| Trabajos Conceptuales | TC\<XX>_\<Descripcion>_Grupo1.\<ext> | /Teorico/Trabajos_Conceptuales/\<DirectorioDelDocumento>/ |
+| Lineamientos Trabajos Conceptuales | Lineamiento_Trabajos_Conceptuales_2023.pdf | /Teorico/Trabajos_Conceptuales/ |
 | Guia de Trabajos Practicos | Guia_Trabajos_Practicos_Evaluables_2023.pdf | /Practico/Guia_Trabajos_Practicos/ |
 | Guia de Trabajos Practicos Resueltos | Guia_Trabajos_Practicos_Resueltos_2023.pdf | /Practico/Guia_Trabajos_Practicos/ |
 | Lineamientos Trabajos Practicos | Lineamientos_Trabajos_Practicos.pdf | /Practico/Guia_Trabajos_Practicos/ |
-| Presentaciones Clases Teorico | Clase_\<XX>_\<Descripcion>.pdf | /Teorico/Presentaciones_Clases_2023 |
-| Templates | Template_\<Descripcion>.\<ext> | /Practico/Guia_Trabajos_Practicos |
+| Presentaciones Clases Teorico | Clase_\<XX>_\<Descripcion>.pdf | /Teorico/Presentaciones_Clases_2023/ |
+| Templates | Template_\<Descripcion>.\<ext> | /Practico/Guia_Trabajos_Practicos/ |
 
 ---
 ## Glosario

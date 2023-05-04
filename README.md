@@ -34,7 +34,8 @@
 | Guia de Trabajos Practicos | Guia_Trabajos_Practicos_Evaluables_2023.pdf | /Practico/Guia_Trabajos_Practicos/ |
 | Guia de Trabajos Practicos Resueltos | Guia_Trabajos_Practicos_Resueltos_2023.pdf | /Practico/Guia_Trabajos_Practicos/ |
 | Lineamientos Trabajos Practicos | Lineamientos_Trabajos_Practicos.pdf | /Practico/Guia_Trabajos_Practicos/ |
-| Presentaciones_Clases_Teorico | Clase_\<XX>_\<Descripcion>.pdf | /Teorico/Presentaciones_Clases_2023 |
+| Presentaciones Clases Teorico | Clase_\<XX>_\<Descripcion>.pdf | /Teorico/Presentaciones_Clases_2023 |
+| Templates | Template_\<Descripcion>.\<ext> | /Practico/Guia_Trabajos_Practicos |
 
 ---
 ## Glosario

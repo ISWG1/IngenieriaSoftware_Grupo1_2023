@@ -37,8 +37,8 @@
 | Lineamientos Trabajos Conceptuales | Lineamiento_Trabajos_Conceptuales_2023.pdf | /Teorico/Trabajos_Conceptuales/ |
 | Guia de Trabajos Practicos | Guia_Trabajos_Practicos_Evaluables_2023.pdf | /Practico/Guia_Trabajos_Practicos/ |
 | Guia de Trabajos Practicos Resueltos | Guia_Trabajos_Practicos_Resueltos_2023.pdf | /Practico/Guia_Trabajos_Practicos/ |
-| Lineamientos Trabajos Practicos | Lineamientos_Trabajos_Practicos.pdf | /Practico/Guia_Trabajos_Practicos/ |
-| Presentaciones Clases Teorico | Clase_\<XX>_\<Descripcion>.pdf | /Teorico/Presentaciones_Clases_2023/ |
+| Lineamientos Trabajos Practicos | Lineamientos_Trabajos_Practicos_2023.pdf | /Practico/Guia_Trabajos_Practicos/ |
+| Presentaciones Clases Teorico | \<XX>_\<Descripcion>.pdf | /Teorico/Presentaciones_Clases_2023/ |
 | Templates | Template_\<Descripcion>.\<ext> | /Practico/Guia_Trabajos_Practicos/ |
 
 ---

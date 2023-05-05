@@ -44,6 +44,8 @@
 | Lineamientos Trabajos Practicos | Lineamientos_Trabajos_Practicos_2023.pdf | /Practico/Guia_Trabajos_Practicos/ |
 | Presentaciones Clases Teorico | \<XX>_\<Descripcion>.pdf | /Teorico/Presentaciones_Clases_2023/ |
 | Templates | Template_\<Descripcion>.\<ext> | /Practico/Guia_Trabajos_Practicos/ |
+| Guía de Scrum en Español | Guia_de_Scrum_en_Español.pdf | /Teórico/Bibliografía/ |
+| Principios del Manifiesto Ágil | Principios_del_Manifiesto_Ágil.pdf | /Teórico/Bibliografía/ |
 
 ---
 ## Glosario

@@ -49,7 +49,7 @@
 
 ---
 ## Glosario
-| Expresion | Descripcion |
+| Expresión | Descripción |
 |-|-|
 | \<XX> | Numero de dos digitos. |
 | | Ejemplo: TP01_REQUERIMIENTOS ÁGILES_User Stories_Grupo1.pdf |
@@ -58,7 +58,7 @@
 | \<DirectorioDelDocumento> | Directorio donde esta almacenado cada trabajo practico con sus debidos documentos. |
 | \<Descripcion> | Descripcion del tema trabajado en el trabajo practico o del tema tratado en la presentacion de las clases teoricas |
 | \<E> | Trabajo Practico Evaluable |
-| \<NE> | Trabjo Practico No Evaluable |
+| \<NE> | Trabajo Practico No Evaluable |
 
 ---
 ## Regla para Determinar la Línea Base

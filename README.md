@@ -11,8 +11,12 @@
 ### Integrantes:
 | Nombre         | Legajo |
 |-|-|
-| Borgatta Lucas | 81664  |
+| Borgatta, Lucas | 81664  |
 | Manero, Nahuel Agustín | 81661  |
+| Fontao, Alejo | 83379 |
+| Gribaudo, Guillermo Tomás  | 83395 |
+| Cazeaux, Matias | 83227 |
+
 
 ---
 

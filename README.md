@@ -26,14 +26,14 @@
 * Practico
   * Guia_Trabajos_Practicos
   * Trabajos_Practicos
-    * TP\<XX>_\<Descripción>
+    * TP\<XX>\_\<Descripción>\_\<Evaluable>
 
 ---
 ## Listado de Ítems de Configuración
 | Nombre del Ítem de Configuración | Regla de Nombrado | Ubicación Física (Ruta Relativa) |
 |-|-|-|
-| Trabajos Practicos | TP\<XX>_\<Descripción>_Grupo1.\<ext> | /Practico/Trabajos_Practicos/\<DirectorioDelDocumento>/ |
-| Trabajos Conceptuales | TC\<XX>_\<Descripcion>_Grupo1.\<ext> | /Teorico/Trabajos_Conceptuales/\<DirectorioDelDocumento>/ |
+| Documento de Trabajo Practico | TP\<XX>_\<Descripción>_Grupo1.\<ext> | /Practico/Trabajos_Practicos/\<DirectorioDelDocumento>/ |
+| Documento de Trabajo Conceptual | TC\<XX>_\<Descripcion>_Grupo1.\<ext> | /Teorico/Trabajos_Conceptuales/\<DirectorioDelDocumento>/ |
 | Lineamientos Trabajos Conceptuales | Lineamiento_Trabajos_Conceptuales_2023.pdf | /Teorico/Trabajos_Conceptuales/ |
 | Guia de Trabajos Practicos | Guia_Trabajos_Practicos_Evaluables_2023.pdf | /Practico/Guia_Trabajos_Practicos/ |
 | Guia de Trabajos Practicos Resueltos | Guia_Trabajos_Practicos_Resueltos_2023.pdf | /Practico/Guia_Trabajos_Practicos/ |
@@ -51,6 +51,8 @@
 | | Ejemplo: .pdf .doc |
 | \<DirectorioDelDocumento> | Directorio donde esta almacenado cada trabajo practico con sus debidos documentos. |
 | \<Descripcion> | Descripcion del tema trabajado en el trabajo practico o del tema tratado en la presentacion de las clases teoricas |
+| \<E> | Trabajo Practico Evaluable |
+| \<NE> | Trabjo Practico No Evaluable |
 
 
 

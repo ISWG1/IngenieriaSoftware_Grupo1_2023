@@ -32,8 +32,8 @@
 ## Listado de Ítems de Configuración
 | Nombre del Ítem de Configuración | Regla de Nombrado | Ubicación Física (Ruta Relativa) |
 |-|-|-|
-| Dcoumento de Trabajo Practico | TP\<XX>_\<Descripción>_Grupo1.\<ext> | /Practico/Trabajos_Practicos/\<DirectorioDelDocumento>/ |
-| Dcoumento de Trabajo Conceptual | TC\<XX>_\<Descripcion>_Grupo1.\<ext> | /Teorico/Trabajos_Conceptuales/\<DirectorioDelDocumento>/ |
+| Documento de Trabajo Practico | TP\<XX>_\<Descripción>_Grupo1.\<ext> | /Practico/Trabajos_Practicos/\<DirectorioDelDocumento>/ |
+| Documento de Trabajo Conceptual | TC\<XX>_\<Descripcion>_Grupo1.\<ext> | /Teorico/Trabajos_Conceptuales/\<DirectorioDelDocumento>/ |
 | Lineamientos Trabajos Conceptuales | Lineamiento_Trabajos_Conceptuales_2023.pdf | /Teorico/Trabajos_Conceptuales/ |
 | Guia de Trabajos Practicos | Guia_Trabajos_Practicos_Evaluables_2023.pdf | /Practico/Guia_Trabajos_Practicos/ |
 | Guia de Trabajos Practicos Resueltos | Guia_Trabajos_Practicos_Resueltos_2023.pdf | /Practico/Guia_Trabajos_Practicos/ |

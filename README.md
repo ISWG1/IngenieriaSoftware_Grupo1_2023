@@ -30,7 +30,7 @@
 * Practico
   * Guia_Trabajos_Practicos
   * Trabajos_Practicos
-    * TP\<XX>\_\<Descripción>\_\<Evaluable>
+    * TP\<XX>\_\<Descripción>\_\<Evaluable o No Evaluable>
 
 ---
 ## Listado de Ítems de Configuración

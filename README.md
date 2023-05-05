@@ -59,7 +59,7 @@
 | \<NE> | Trabjo Practico No Evaluable |
 
 ---
-## Línea Base
+## Regla para Determinar la Línea Base
 Se define el momento de los parciales como el indicado para marcar una línea base en el conjunto de ítems de configuración con sus correspondientes versiones. Para esto utilizaremos la herramienta de "tags" que proporciona Git.
 
 

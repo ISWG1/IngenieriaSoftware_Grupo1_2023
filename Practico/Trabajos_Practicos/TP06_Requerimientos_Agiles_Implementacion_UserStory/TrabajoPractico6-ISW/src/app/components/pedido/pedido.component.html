@@ -1,0 +1,361 @@
+<div class="container">
+  <div class="circle-principal entrance-animation">
+
+  </div>
+
+  <div class="container-us">
+    <div class="header-pedido">
+      <div class="container-img">
+        <img src="" class="img-responsive">
+      </div>
+
+      <div class="title">
+        <h1>
+          Realizar pedido!
+        </h1>
+      </div>
+
+    </div>
+
+    <div class="description-pedido">
+      <mat-stepper linear="true" #stepper orientation="vertical" (selectionChange)="onStepChange($event)">
+        <mat-step [stepControl]="formToSearch">
+          <ng-template matStepLabel>Que hay que buscar?</ng-template>
+
+          <ng-template matStepContent>
+            <form name="formToSearch" [formGroup]="formToSearch">
+              <mat-grid-list [cols]="1" [rowHeight]="row">
+                <mat-grid-tile colspan="1" rowspan="1">
+                  <div class="input-imagen-container">
+
+                    <mat-label>Imagen de lo necesitado (opcional).</mat-label>
+                    <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+                    <div class="file-upload">
+
+                      <button mat-mini-fab color="primary" class="upload-btn" (click)="fileUpload.click()">
+                        <mat-icon>add_photo_alternate</mat-icon>
+                      </button>
+                      <p>{{fileName}}</p>
+                    </div>
+                  </div>
+
+                </mat-grid-tile>
+
+                <mat-grid-tile colspan="1" rowspan="1">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Que hay que buscar?</mat-label>
+
+                    <textarea maxlength="120" matInput #title formControlName="title"></textarea>
+                    <mat-hint>{{title.value.length}} / 120</mat-hint>
+                    <mat-error
+                      *ngIf="formToSearch.get('title')?.touched && formToSearch.get('title')?.errors?.['required']">Descripción
+                      es
+                      requerido</mat-error>
+
+                    <mat-error
+                      *ngIf="formToSearch.get('title')?.touched && !formToSearch.get('title')?.errors?.['patern']">Descripción
+                      debe contener una palabra</mat-error>
+
+                  </mat-form-field>
+
+                </mat-grid-tile>
+
+                <mat-grid-tile colspan="1" rowspan="1">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Precio</mat-label>
+
+                    <input matInput type="number" class="input-right" placeholder="0" formControlName="precio">
+                    <span matTextPrefix>$&nbsp;</span>
+
+
+
+                    <mat-error
+                      *ngIf="formToSearch.get('precio')?.touched && formToSearch.get('precio')?.errors?.['required']">Precio
+                      es requerido</mat-error>
+
+                    <mat-error
+                      *ngIf="formToSearch.get('precio')?.touched && formToSearch.get('precio')?.errors?.['pattern']">Precio
+                      debe ser solo númerico</mat-error>
+
+                  </mat-form-field>
+
+                </mat-grid-tile>
+
+              </mat-grid-list>
+            </form>
+            <mat-grid-list class="center" cols="1" rowHeight="50px">
+              <mat-grid-tile colspan="1" rowspan="1">
+                <button color="black" mat-button matStepperNext>Siguiente</button>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </ng-template>
+        </mat-step>
+        <mat-step [stepControl]="formUbicationToSearch">
+          <ng-template matStepLabel>A donde hay que buscarlo?</ng-template>
+          <ng-template matStepContent>
+            <form name="formUbicationToSearch" [formGroup]="formUbicationToSearch" *ngIf="formUbicationToSearch.get('calle')?.value.length > 0">
+              <mat-grid-list [cols]="columnas" [rowHeight]="row">
+                <mat-grid-tile colspan="1" rowspan="1">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Calle</mat-label>
+                    <input readonly matInput formControlName="calle">
+                    <mat-error
+                      *ngIf="formUbicationToSearch.get('calle')?.touched && !formUbicationToSearch.get('calle')?.valid">Calle
+                      es
+                      requerido</mat-error>
+                  </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="1" rowspan="1">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Altura</mat-label>
+                    <input readonly matInput formControlName="altura">
+                    <mat-error
+                      *ngIf="formUbicationToSearch.get('altura')?.touched && formUbicationToSearch.get('altura')?.errors?.['required']">Altura
+                      es requerido</mat-error>
+                    <mat-error
+                      *ngIf="formUbicationToSearch.get('altura')?.touched && formUbicationToSearch.get('altura')?.errors?.['pattern']">Altura
+                      debe ser solo númerico y puede contener hasta 5 caracteres</mat-error>
+                  </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="1" rowspan="1">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Ciudad</mat-label>
+                    <mat-select readonly matInput formControlName="ciudad">
+                      <mat-option *ngFor="let ciudad of ciudades" [value]="ciudad">{{ciudad}}</mat-option>
+                    </mat-select>
+                    <mat-error
+                      *ngIf="formUbicationToSearch.get('ciudad')?.touched && !formUbicationToSearch.get('ciudad')?.valid">Ciudad
+                      es requerido</mat-error>
+                  </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="1" rowspan="1">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Referencia</mat-label>
+                    <textarea maxlength="120" matInput #referencia formControlName="referencia"></textarea>
+                    <mat-hint>{{referencia.value.length}} / 120</mat-hint>
+                  </mat-form-field>
+                </mat-grid-tile>
+              </mat-grid-list>
+            </form>
+            <div style="width: 100%; display: flex; alig-items: center; justify-content: center; margin: 20px 0px;">
+              <button mat-button color="secundary" (click)="openDialogMapSearch()">Cargar por mapa</button>
+            </div>
+
+
+            <mat-grid-list class="center" cols="1" rowHeight="50px">
+              <mat-grid-tile colspan="1" rowspan="1">
+                <button color="black" mat-button matStepperPrevious>Volver</button>
+                <button color="black" mat-button matStepperNext>Siguiente</button>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </ng-template>
+        </mat-step>
+        <mat-step [stepControl]="formUbicationToDeliver">
+          <ng-template matStepLabel>Selecciona la dirección de entrega</ng-template>
+          <ng-template matStepContent>
+            <form name="formUbicationToDeliver" [formGroup]="formUbicationToDeliver" *ngIf="formUbicationToDeliver.get('calle')?.value.length > 0">
+              <mat-grid-list [cols]="columnas" [rowHeight]="row">
+                <mat-grid-tile colspan="1" rowspan="1">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Calle</mat-label>
+                    <input readonly matInput formControlName="calle">
+                    <mat-error
+                      *ngIf="formUbicationToDeliver.get('calle')?.touched && !formUbicationToDeliver.get('calle')?.valid">Titulo
+                      es
+                      requerido</mat-error>
+                  </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="1" rowspan="1">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Altura</mat-label>
+                    <input readonly matInput formControlName="altura">
+                    <mat-error
+                      *ngIf="formUbicationToDeliver.get('altura')?.touched && formUbicationToDeliver.get('altura')?.errors?.['required']">Altura
+                      es requerido</mat-error>
+                    <mat-error
+                      *ngIf="formUbicationToDeliver.get('altura')?.touched && formUbicationToDeliver.get('altura')?.errors?.['pattern']">Altura
+                      debe ser solo númerico y puede contener hasta 5 caracteres</mat-error>
+                  </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="1" rowspan="1">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Ciudad</mat-label>
+                    <mat-select readonly matInput formControlName="ciudad">
+                      <mat-option *ngFor="let ciudad of ciudades" [value]="ciudad">{{ciudad}}</mat-option>
+                    </mat-select>
+                    <mat-error
+                      *ngIf="formUbicationToDeliver.get('ciudad')?.touched && !formUbicationToDeliver.get('ciudad')?.valid">Titulo
+                      es requerido</mat-error>
+                  </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="1" rowspan="1">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Referencia</mat-label>
+                    <textarea maxlength="120" matInput #referencia formControlName="referencia"></textarea>
+                    <mat-hint>{{referencia.value.length}} / 120</mat-hint>
+                  </mat-form-field>
+                </mat-grid-tile>
+              </mat-grid-list>
+            </form>
+            <div style="width: 100%; display: flex; alig-items: center; justify-content: center; margin: 20px 0px;">
+              <button mat-button color="secundary" (click)="openDialogMapDeliver()">Cargar por mapa</button>
+            </div>
+
+
+            <mat-grid-list class="center" cols="1" rowHeight="50px">
+              <mat-grid-tile colspan="1" rowspan="1">
+                <button color="black" mat-button matStepperPrevious>Volver</button>
+                <button color="black" mat-button matStepperNext (click)="calcularDistancia()">Siguiente</button>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </ng-template>
+        </mat-step>
+        <mat-step [stepControl]="formPayment">
+          <ng-template matStepLabel>Forma de pago</ng-template>
+          <ng-template matStepContent>
+            <form name="formPayment" [formGroup]="formPayment">
+              <mat-grid-list [cols]="columnas" [rowHeight]="row">
+                <mat-grid-tile colspan="1" rowspan="1">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Forma Pago</mat-label>
+                    <mat-select matInput formControlName="formaPago" (selectionChange)="selectionChange()">
+                      <mat-option *ngFor="let formaPago of formasPago" [value]="formaPago">{{formaPago}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="formPayment.get('formaPago')?.touched && !formPayment.get('formaPago')?.valid">
+                      Forma de pago es requerido
+                    </mat-error>
+                  </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="1" rowspan="1" *ngIf="efectivo">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Con cuanto vas a pagar?</mat-label>
+                    <input matInput type="number" class="example-right-align" placeholder="0"
+                      formControlName="montoPagar">
+
+                    <mat-error
+                      *ngIf="formPayment.get('montoPagar')?.touched && !formPayment.get('montoPagar')?.valid">El monto
+                      debe ser mayor o igual a el total</mat-error>
+                  </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="1" rowspan="1" *ngIf="!efectivo">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Numero tarjeta</mat-label>
+                    <input maxLength="16" matInput #numeroTarjeta formControlName="numeroTarjeta">
+                    <mat-hint>{{numeroTarjeta.value.length}}/16</mat-hint>
+                    <mat-error
+                      *ngIf="formPayment.get('numeroTarjeta')?.touched && formPayment.get('numeroTarjeta')?.errors?.['required']">Numero
+                      tarjeta
+                      es requerido</mat-error>
+                    <mat-error
+                      *ngIf="formPayment.get('numeroTarjeta')?.touched && formPayment.get('numeroTarjeta')?.errors?.['pattern']">Numero
+                      tarjeta
+                      debe ser correspondiente a Visa</mat-error>
+                  </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="1" rowspan="1" *ngIf="!efectivo">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Codigo Tarjeta</mat-label>
+                    <input maxLength="3" matInput #codigoTarjeta formControlName="codigoTarjeta">
+                    <mat-hint>{{codigoTarjeta.value.length}} / 3</mat-hint>
+                    <mat-error
+                      *ngIf="formPayment.get('codigoTarjeta')?.touched && formPayment.get('codigoTarjeta')?.errors?.['required']">Codigo
+                      tarjeta
+                      es requerido</mat-error>
+                    <mat-error
+                      *ngIf="formPayment.get('codigoTarjeta')?.touched && formPayment.get('codigoTarjeta')?.errors?.['pattern']">Codigo
+                      debe ser solo númerico y debe tener 3 caracteres</mat-error>
+                  </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="1" rowspan="1" *ngIf="!efectivo">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Month and Year</mat-label>
+                    <input readonly matInput [matDatepicker]="dp" [formControl]="date" formControlName="fechaVencimiento">
+                    <mat-hint>MM/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
+                    <mat-datepicker #dp startView="multi-year" (monthSelected)="setMonthAndYear($event, dp)"
+                      panelClass="example-month-picker">
+                    </mat-datepicker>
+                    <mat-error
+                      *ngIf="formPayment.get('fechaVencimiento')?.touched && !formPayment.get('fechaVencimiento')?.valid">Fecha
+                      vencimiento
+                      es requerido</mat-error>
+                  </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="1" rowspan="1" *ngIf="!efectivo">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Nombre titular</mat-label>
+                    <input matInput formControlName="nombreTitular">
+                    <mat-error
+                      *ngIf="formPayment.get('nombreTitular')?.touched && !formPayment.get('nombreTitular')?.valid">Nombre
+                      titular
+                      es requerido</mat-error>
+                  </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="1" rowspan="1">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Total</mat-label>
+                    <input matInput  type="number" class="input-right" placeholder="0" formControlName="total">
+                    <mat-hint>${{formToSearch.controls['precio'].value}} + precio delivery</mat-hint>
+                    <mat-error
+                      *ngIf="formPayment.get('total')?.touched && formPayment.get('total')?.errors?.['required']">Total
+                      es requerido</mat-error>
+                    <mat-error
+                      *ngIf="formPayment.get('total')?.touched && formPayment.get('total')?.errors?.['pattern']">Total
+                      debe ser solo númerico</mat-error>
+                  </mat-form-field>
+                </mat-grid-tile>
+              </mat-grid-list>
+            </form>
+            <mat-grid-list class="center" cols="1" rowHeight="50px">
+              <mat-grid-tile colspan="1" rowspan="1">
+                <button color="black" mat-button matStepperPrevious>Volver</button>
+                <button color="black" mat-button matStepperNext>Siguiente</button>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </ng-template>
+        </mat-step>
+        <mat-step [stepControl]="formDateTimeToDeliver">
+          <!--Agregar fecha antes posible si no el guille se enoja-->
+          <ng-template matStepLabel>Selecciona fecha y hora de entrega</ng-template>
+          <ng-template matStepContent>
+            <form name="formDateTimeToDeliver" [formGroup]="formDateTimeToDeliver">
+              <mat-grid-list [cols]="1" [rowHeight]="row">
+                <mat-grid-tile colspan="1" rowspan="1">
+                  <mat-form-field appearence="outline">
+                    <mat-select mat-input (selectionChange)="selectionDateChange()"
+                      formControlName="selectedOptionDate">
+                      <mat-option value="LoAntesPosible">Lo antes posible</mat-option>
+                      <mat-option value="SeleccionarFecha">Seleccionar fecha</mat-option>
+                    </mat-select></mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile colspan="1" rowspan="1" *ngIf="selectedOptionDate">
+                  <mat-form-field appearance="outline">
+                    <input matInput type="datetime-local" placeholder="start date" formControlName="horaFecha">
+                    <mat-error
+                      *ngIf="formDateTimeToDeliver.get('horaFecha')?.touched && formDateTimeToDeliver.get('horaFecha')?.errors">Fecha
+                      debe ser mayor a la actual</mat-error>
+                  </mat-form-field>
+                </mat-grid-tile>
+
+              </mat-grid-list>
+            </form>
+
+            <mat-grid-list class="center" cols="1" rowHeight="50px">
+              <mat-grid-tile colspan="1" rowspan="1">
+                <button color="black" mat-button matStepperPrevious>Volver</button>
+                <button color="black" mat-button matStepperNext>Siguiente</button>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </ng-template>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Listo!</ng-template>
+          <div style="width: 100%; display: flex; alig-items: center; justify-content: center; margin: 20px 0px;">
+            <button color="black" mat-button (click)="realizarPedido()">Realizar pedido!</button>
+          </div>
+        </mat-step>
+      </mat-stepper>
+    </div>
+  </div>
+</div>

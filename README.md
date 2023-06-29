@@ -62,7 +62,7 @@
 
 ---
 ## Regla para Determinar la Línea Base
-Se define el momento de los parciales como el indicado para marcar una línea base en el conjunto de ítems de configuración con sus correspondientes versiones. Para esto utilizaremos la herramienta de "tags" que proporciona Git.
+Se define el momento de los parciales, incluyendo el recuperatorio como un parcial, como el indicado para marcar una línea base en el conjunto de ítems de configuración con sus correspondientes versiones. Para esto utilizaremos la herramienta de "tags" que proporciona Git.
 
 
 

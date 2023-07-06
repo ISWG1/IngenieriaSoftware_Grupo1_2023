@@ -45,6 +45,7 @@
 | Presentaciones Clases Teorico | \<XX>_\<Descripcion>.pdf | /Teorico/Presentaciones_Clases_2023/ |
 | Templates | Template_\<Descripcion>.\<ext> | /Practico/Guia_Trabajos_Practicos/ |
 | Guía de Scrum en Español | Guia_de_Scrum_en_Español.pdf | /Teórico/Bibliografía/ |
+| Guía de Nexus en Español | Guia_Nexus_en_Español.pdf | /Teórico/Bibliografía/ |
 | Principios del Manifiesto Ágil | Principios_del_Manifiesto_Ágil.pdf | /Teórico/Bibliografía/ |
 
 ---
